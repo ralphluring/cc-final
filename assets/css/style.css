@@ -1,0 +1,40 @@
+#age-modal{
+    height: 100vh;
+    background-color: #112033;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 2rem;
+    color:#F9F9F9;
+    text-align: center;
+}
+
+.age-modal-img{
+    height: 30vh;
+}
+
+.age-buttons{
+    padding: 50px 0px;
+}
+
+.age-buttons > button{
+background: #112033;
+border:2px solid #F9F9F9;
+font-size: 1rem;
+color:#F9F9F9;
+font-family: 'Varela Round', sans-serif;
+}
+
+.age-buttons > button:hover{
+    background: #64777F;
+}
+
+.age-modal-img > img{
+    height: 100%;
+}
+
+#main-wrapper{
+    background-color: #64777F;
+}
+
