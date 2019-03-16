@@ -1,3 +1,7 @@
+body{
+    background-image: url(../images/logo-yellow.png);
+    background-size: 3%;
+}
 #age-modal{
     height: 100vh;
     background-color: #112033;
@@ -34,7 +38,12 @@ font-family: 'Varela Round', sans-serif;
     height: 100%;
 }
 
+.fade{
+    opacity: 0%;
+}
+
 #main-wrapper{
     background-color: #64777F;
+    height: 100vh;
 }
 
