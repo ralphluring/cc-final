@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./assets/images/icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Assistant|Questrial" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/findus.css">
+    <title>Constellation</title>
+</head>
+<body>
+    
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+
+    <a href="straincatalog.html">Strain Catalog</a>
+
+    <a href="findus.html">Find Us</a>
+    <a href="#">Blog</a>
+    <a href="#">Merch</a>
+  </div>
+</div>
+<div class="container">
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="./assets/images/logo.png" alt="logo">
+            </a>
+        </div>
+        
+        <nav class="nav">
+            <ul class="desktop-nav">
+                <li><a href="straincatalog.html">Strain Catalog</a></li>
+                <li><a href="findus.html">Where to Buy</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Merch</a></li>
+            </ul>
+
+            <img src="./assets/images/menu-button.png" alt="" height="50px" class="menuButton">
+        </nav>
+      
+    </header>
+
+
+
+
+    <div id="map">
+
+    </div>
+
+    <div id="store-list-container">
+            <div class="store-group">
+                <div class="store-group"><h2 class="store-group-label">Seattle</h2></div>
+                <div id="stores-seattle" class="store"></div>
+            </div>
+            <div class="store-group">
+                <div class="store-group"><h2 class="store-group-label">North of Seattle</h2></div>
+                <div id="stores-north"  class="store"></div>
+            </div>
+            <div class="store-group">
+                <div class="store-group"><h2 class="store-group-label">South of Seattle</h2></div>
+                <div id="stores-south"  class="store"></div>
+            </div>
+            <div class="store-group">
+                <div class="store-group"><h2 class="store-group-label">Eastern Washington</h2></div>
+                <div id="stores-east"  class="store"></div>
+            </div>
+    
+        </div>
+
+
+    <footer>
+        
+        <p>
+            "This product has intoxicating effects and may be habit forming. 
+            Marijuana can impair concentration, coordination, and judgment. 
+            Do not operate a vehicle or machinery under the influence of this 
+            drug.” “There may be health risks associated with consumption of 
+            this product. For use only by adults twenty-one and older. 
+            Keep out of the reach of children."
+        </p>
+        <p>&copy;2019 - constellation cannabis</p>
+    </footer>
+
+</div>
+
+<script>
+    function initMap() {
+        let mapicon = "./assets/images/retaillogos/mapicon.png";
+        var locations = [
+        ['Uncle Ikes - Capitol Hill', 47.623895, -122.312931,"<div><img src='./assets/images/retaillogos/uncleikes.png' height='80px' width='80px'><div>","<div><p>   500 15th Ave E<br> Seattle</div>" ],
+        ['Uncle Ikes - Central District', 47.613546, -122.302224,"<div><img src='./assets/images/retaillogos/uncleikes.png' height='80px' width='80px'><div>","<div><p>    1412 23rd Ave <br>Seattle </div>" ],
+        ['Rubber Soul', 47.652728, -122.354732,"<img src='./assets/images/retaillogos/cannashop.svg' height='80px' width='80px'>","<div><p>316 N. 36TH St. STE B  <br>  Seattle</div>"],
+        ['Local Roots - Edmonds', 47.788359, -122.353929,"<img src='./assets/images/retaillogos/localroots.png' height='80px' width='80px'>","<div><p> 23221 Edmonds way STE A <br>  Edmonds</div>"],
+        ['Local Roots - Everett', 47.882877, -122.240769,"<img src='./assets/images/retaillogos/localroots.png' height='80px' width='80px'>","<div><p> 517 128TH ST SW STE B <br>  Everett</div>"],
+        ['Cannazone', 48.426923, -122.359312,"<img src='./assets/images/retaillogos/cannazone.png' height='80px' width='80px'>","<div><p>17905 State Route 536 <br> Mount Vernon</div>"],
+        ['A Greener Today', 47.822868, -122.206477,"<img src='./assets/images/retaillogos/greenertoday.png' height='80px' width='80px'>","<div><p> 19315 Bothell Everett Hwy Unit#1 <br>  Bothell</div>"],
+        ['A Greener Today - Walla Walla', 46.061452, -118.346455,"<img src='./assets/images/retaillogos/greenertoday.png' height='80px' width='80px'>","<div><p> 207 S 9th AVE  <br>  Walla Walla</div>"],
+        ['A Greener Today - Lynwood', 47.866150, -122.281175,"<img src='./assets/images/retaillogos/greenertoday.png' height='80px' width='80px'>","<div><p>  14608 WA-99 <br> Lynwood</div>"],
+        ['Herbal Nation', 47.823038, -122.208050,"<img src='./assets/images/retaillogos/herbalnation.png' height='80px' width='150px'>","<div><p> 19302 Bothell Everett Hwy <br> Bothell</div>"],
+        ['Bloom',47.895454, -122.252530,"<img src='./assets/images/retaillogos/bloom.png' height='100px' width='150px'>","<div><p> 19302 Bothell Everett Hwy <br> Bothell</div>"],
+        ['Bloom',47.159885, -122.433647,"<img src='./assets/images/retaillogos/bloom.png' height='100px' width='150px'>","<div><p> 10707 PACIFIC AVE S SUITE D <br> Tacoma</div>"],
+        ['Bloom',47.895440, -122.252584,"<img src='./assets/images/retaillogos/bloom.png' height='100px' width='150px'>","<div><p> 11311-11301 Evergreen Way<br> Everett</div>"],
+        ['Clutch',47.499524, -122.220995,"<img src='./assets/images/retaillogos/clutch.png' height='100px' width='150px'>","<div><p>  11537 RAINIER AVE S <br> Seattle</div>"],
+        ['Green Theory - Factoria',47.573358, -122.168345,"<img src='./assets/images/retaillogos/greentheory.jpg' height='100px' width='150px'>","<div><p>  12827 SE 40th Pl <br> Bellevue</div>"],
+        ['Green Theory',47.628215, -122.174226,"<img src='./assets/images/retaillogos/greentheory.jpg' height='100px' width='150px'>","<div><p> 1940 124TH AVE NE STE A-101 <br> Bellevue</div>"],
+        ['The Partakarey',47.676074, -122.362555,"<img src='./assets/images/retaillogos/cannashop.svg' height='100px' width='150px'>","<div><p> 417 NW 65th St <br> Seattle</div>"],
+        ['Ruckus',47.623202, -122.312968,"<img src='./assets/images/retaillogos/ruckus_logo.png' height='100px' width='150px'>","<div><p>  1465 E REPUBLICAN ST <br> Seattle</div>"],
+        ['Satori - Bellingham',48.747604, -122.482306,"<img src='./assets/images/retaillogos/satori.jpg' height='100px' width='150px'>","<div><p>  100 E Maple St <br>Bellingham</div>"],
+        ['Satori - Spokane',47.627185, -117.369791,"<img src='./assets/images/retaillogos/satori.jpg' height='100px' width='150px'>","<div><p>  2808 E 30th Ave <br>Spokane</div>"],
+        ['PRC',48.151967, -122.160852,"<img src='./assets/images/retaillogos/prcarlington.jpg' height='100px' width='150px'>","<div><p>  5200 172ND ST NE <br>Arlington</div>"],
+        ['American Mary',47.661416,-122.324231,"<img src='./assets/images/retaillogos/americanmary.png' height='100px' width='300px'>","<div><p> 398-302 NE 45th St<br>Seattle</div>"],
+        ['Clear Choice - Tacoma',47.184636,-122.462375,"<img src='./assets/images/retaillogos/clearchoice.jpg' height='100px' width='150px'>","<div><p>8001 S Hosmer St<br>Tacoma</div>"],
+        ['The Bakaree',47.553752,-122.335645,"<img src='./assets/images/retaillogos/cannashop.svg' height='100px' width='150px'>","<div><p>74 S Lucile St<br>Seattle</div>"],
+        ['Evergreen Market - Auburn',47.321943,-122.224235,"<img src='./assets/images/retaillogos/evergreen.png' height='100px' width='150px'>","<div><p>   402 16th St NE<br>Auburn</div>"],
+        ['Evergreen Market - Renton',47.441654,-122.218803,"<img src='./assets/images/retaillogos/evergreen.png' height='100px' width='150px'>","<div><p>  4242 E Valley Rd<br>Renton</div>"],
+        ['Fweedom',47.716230,-122.345690,"<img src='./assets/images/retaillogos/fweedom.png' height='100px' width='150px'>","<div><p>  12001 Aurora Ave N <br> Seattle </div>"],
+        ['Ganja Goddess',47.575428,-122.334779,"<img src='./assets/images/retaillogos/ganjagoddess.jpg' height='100px' width='150px'>","<div><p> 3201 1st Ave S <br> Seattle </div>"],
+        ['Green 2 Go',46.170590, -119.051253,"<img src='./assets/images/retaillogos/green2go.jpeg' height='100px' width='150px'>","<div><p>  214307 E SR 397 <br> KENNEWICK </div>"],
+        ['Have a Heart',47.613084, -122.344360,"<img src='./assets/images/retaillogos/Haveaheart_logo.png' height='100px' width='150px'>","<div><p> 113-199 Blanchard St <br> Seattle </div>"],
+        ['Have a Heart',47.691071, -122.360849,"<img src='./assets/images/retaillogos/Haveaheart_logo.png' height='100px' width='150px'>","<div><p>300 NW 85TH STREET STE A STE A <br> Seattle </div>"],
+        ['Have a Heart - Bothell',47.792257, -122.233540,"<img src='./assets/images/retaillogos/Haveaheart_logo.png' height='100px' width='150px'>","<div><p> 22620 Meridian Ave S<br> Bothell</div>"],
+        ['High End Marketplace',45.636260, -122.670724,"<img src='./assets/images/retaillogos/highend.png' height='100px' width='150px'>","<div><p>1920 Broadway St<br> Vancouver</div>"],
+        ['Higher Leaf',47.713073, -122.154434,"<img src='./assets/images/retaillogos/higherleaf.png' height='100px' width='150px'>","<div><p> 12525 Willows Rd <br> Kirkland</div>"],
+        ['Last Stop Pot Shop',47.843532, -121.673388,"<img src='./assets/images/retaillogos/laststoppotshop.gif' height='100px' width='150px'>","<div><p> 41711 Stevens Pass Hwy<br> Gold Bar</div>"],
+        ["Kushman's",47.897543, -122.290542,"<img src='./assets/images/retaillogos/kushmans.jpg' height='100px' width='150px'>","<div><p>  11110 Mukilteo Speedway #102<br> Mukilteo</div>"],
+        ["Kush Mart - South Everett",47.878400, -122.269528,"<img src='./assets/images/retaillogos/kushmart.jpeg' height='100px' width='150px'>","<div><p>  13210 WA-99<br> Everett</div>"],
+        ["Local Amster",46.122565, -122.936405,"<img src='./assets/images/retaillogos/cannashop.svg' height='100px' width='150px'>","<div><p> 1006 California Way <br> Longview</div>"],
+        ["Yakima Weed Co.",46.612478, -120.531037,"<img src='./assets/images/retaillogos/cannashop.svg' height='100px' width='150px'>","<div><p>  1601-1607 Fruitvale Blvd <br> Yakima</div>"],
+        ["Origins - Redmond",47.673489, -122.121673,"<img src='./assets/images/retaillogos/origins.jpg' height='100px' width='150px'>","<div><p>  16390 CLEVELAND ST. <br> Redmond</div>"],
+        ["Origins - Seattle",47.559140, -122.382463,"<img src='./assets/images/retaillogos/origins.jpg' height='100px' width='150px'>","<div><p>   4800 40TH AVE SW STE B STE B<br> Seattle</div>"],
+        ["Paper & Leaf",47.680634, -122.541300,"<img src='./assets/images/retaillogos/paperandleaf.jpg' height='100px' width='150px'>","<div><p> 8060 NE Day Rd W<br>Bainbridge Island</div>"],
+        ["Slalish Coast Cannabis",48.456935, -122.518394,"<img src='./assets/images/retaillogos/slalish.png' height='100px' width='150px'>","<div><p> 12939 CASINO DR<br>Anacortes</div>"],
+        ["THC of Olympia",47.046647, -122.852620,"<img src='./assets/images/retaillogos/thcolympia.jpg' height='100px' width='150px'>","<div><p> 3153-3203 Martin Way E<br>Olympia</div>"],
+        ["The Green Nugget",47.715461, -117.380522,"<img src='./assets/images/retaillogos/greennugget.png' height='100px' width='150px'>","<div><p>     1907 E Francis Ave<br>Spokane</div>"],
+        ];
+    
+        var needle= {lat: 47.620738, lng: -122.349234};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: needle,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+
+        var infowindow = new google.maps.InfoWindow();
+        var marker, i;
+        for (i = 0; i < locations.length; i++) {  
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            map: map,
+            icon:mapicon
+        });
+
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+            infowindow.setContent(locations[i][3] + "<br>" + locations[i][0] + "<br>" + locations[i][4]);
+            infowindow.open(map, marker);
+            }
+        })(marker, i));
+        }
+
+        var markerCluster = new MarkerClusterer(map, markers);
+
+    }
+</script>
+
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiJkd8DOcrq3928RWzrxZijuP7FiDYnaU&callback=initMap">
+</script>
+
+
+
+<script src="newmap.js"></script>
+<script src="./assets/js/index.js"></script>
+   <!-- ,;;;;;;;;;;;.
+ ,;;;;;;;;;`````)
+,;;;;;;;;'    (@)               ,',
+;;;;;;;;')       \               ,
+;;;;;;;;_}       _)            ',
+;;;;;;'        _;_______________
+`;;;;;        ;_.---------------'
+  `;;;         (
+    `;.        ) cb 2019-->
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+/* mobile nav styles */
+
+body{
+    background-color: #f1f1f1;
+  }
+  .overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 3;
+      top: 0;
+      left: 0;
+      background-color: #112033;
+      background-color:rgba(15, 31, 50, .95);
+      overflow-x: hidden;
+      transition: 0.5s;
+       font-family: 'Assistant', sans-serif;
+  
+    }
+    
+    .overlay-content {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #f1f1f1;
+      display: block;
+      transition: 0.3s;
+      border-bottom:.5px solid #f1f1f1;
+    }
+  
+    .overlay a:last-child{
+      border:none;
+    }
+    
+    .overlay a:hover, .overlay a:focus {
+      color: #f1f1f1;
+    }
+    
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+    }
+  
+    .desktop-nav{
+      display: none;
+  }
+  /* end mobile nav styles */
+   .container{
+     width: 100%;
+   
+  font-family: 'Questrial', sans-serif;
+  
+    }
+  
+    .header{
+        background-color: #112033;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+  
+    .logo{
+      display: flex;
+      justify-content: center;
+    }
+  
+    .logo  a > img{
+      max-height: 100px;
+      padding: 10px;
+    }
+  
+    .nav{
+      display: flex;
+      justify-content: center;
+    }
+
+
+
+
+    @media screen and (max-height: 450px) {
+        .overlay a {font-size: 20px}
+        .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+        }
+    }
+      @media screen and (min-width: 700px) {
+        .menuButton{
+            display: none;
+        }
+    
+        .desktop-nav{
+          display:flex;
+        }
+    
+        .logo img{
+          min-height: 150px;
+        }
+    
+        .desktop-nav li{
+          padding:20px;
+          text-align: center;   
+        }
+    
+        .desktop-nav li:hover{
+          background-color:rgba(255, 255, 255, .4) ; 
+        }
+    
+    
+        .desktop-nav li a{ 
+          color:#f1f1f1;    
+        }
+    
+        .strain-card{
+          top: 80%;
+          left: 70%;
+      }
+    
+      .strain-card h1{
+        font-size: 2rem;
+      }
+    
+      .strain-card a{
+        font-size: 1.8rem;
+        margin-left: 25px;
+      }
+    
+      #products2 h3{
+        font-size: 2rem;
+      }
+    
+      .retail-logo-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        background-color: #fff;
+      }
+    
+      .about{
+        min-height: 550px;
+        background-size:contain;
+        background-repeat: no-repeat;
+      }
+    
+      .about-text{
+        padding-right: 150px;
+      }
+    
+      .about-text p{
+        line-height: 3rem;
+        font-size: 1.8rem;
+      }
+    
+      .about-link a{
+        font-size: 1.6rem;
+      }
+    
+    
+        }
+    
