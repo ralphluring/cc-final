@@ -85,6 +85,68 @@ body{
       justify-content: center;
     }
 
+      /* Dropdown Button */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 3;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 1.6rem;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: rgb(221, 221, 221)}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display:block;
+  animation: popout 1s ease;
+  -webkit-animation: popout 1s ease;
+  margin-left: -30px;
+}
+
+
+@keyframes popout {
+  from{transform:scale(0)}
+  80%{transform:scale(1.2)}
+  to{transform:scale(1)}
+}
+@-webkit-keyframes popout {
+  from{-webkit-transform:scale(0)}
+  80%{-webkit-transform:scale(1.2)}
+  to{-webkit-transform:scale(1)}
+}
     .catalog-grid{
       display: grid;
       grid-template-columns: 1fr ;
@@ -94,10 +156,6 @@ body{
     .catalog-item{
       max-width: 100%;;
     }
-
-    /* .strain-catalog *{
-      border: 1px solid black;
-    } */
 
     .strain-catalog h2{
       padding: 10px;
@@ -230,6 +288,11 @@ body{
     footer p{
       padding: 10px;
     }
+
+   h2{
+      font-weight: 900;
+      font-size: 1.5rem;
+      }
 
 
 

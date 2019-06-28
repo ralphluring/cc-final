@@ -1,0 +1,412 @@
+/* mobile nav styles */
+html {
+    scroll-behavior: smooth;
+  }
+  body{
+      background-color: #f1f1f1;
+    }
+    .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        background-color: #112033;
+        background-color:rgba(15, 31, 50, .95);
+        overflow-x: hidden;
+        transition: 0.5s;
+         font-family: 'Assistant', sans-serif;
+    
+      }
+      
+      .overlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+      }
+      
+      .overlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: #f1f1f1;
+        display: block;
+        transition: 0.3s;
+        border-bottom:.5px solid #f1f1f1;
+      }
+    
+      .overlay a:last-child{
+        border:none;
+      }
+      
+      .overlay a:hover, .overlay a:focus {
+        color: #f1f1f1;
+      }
+      
+      .overlay .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+      }
+    
+      .desktop-nav{
+        display: none;
+    }
+  
+     .container{  
+      width: 100%;
+      font-family: 'Questrial', sans-serif;
+      }
+    
+      .header{
+          background-color: #112033;
+          display: grid;
+          grid-template-rows: auto;
+          grid-template-columns: 1fr 1fr;
+          align-items: center;
+      }
+    
+      .logo{
+        display: flex;
+        justify-content: center;
+      }
+    
+      .logo  a > img{
+        max-height: 100px;
+        padding: 10px;
+      }
+    
+      .nav{
+        display: flex;
+        justify-content: center;
+      }
+  
+        /* Dropdown Button */
+  .dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 3;
+  }
+  
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 1.6rem;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: rgb(221, 221, 221)}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display:block;
+  animation: popout 1s ease;
+  -webkit-animation: popout 1s ease;
+  margin-left: -30px;
+}
+
+
+@keyframes popout {
+  from{transform:scale(0)}
+  80%{transform:scale(1.2)}
+  to{transform:scale(1)}
+}
+@-webkit-keyframes popout {
+  from{-webkit-transform:scale(0)}
+  80%{-webkit-transform:scale(1.2)}
+  to{-webkit-transform:scale(1)}
+}
+  
+      .catalog-grid{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto;
+      }
+  
+      .catalog-item{
+        max-width: 100%;;
+      }
+  
+      .strain-catalog h2{
+        padding: 10px;
+        border-bottom: 1px solid black;
+      }
+  
+      .strain-catalog h1{
+       text-align: center;
+       padding: 30px 0px;
+       font-size: 1.5rem;
+      }
+  
+      .strain-catagory{
+        text-align: center;
+        font-size: 1.1rem;
+      }
+  
+      .strain-catagory-list > li { 
+        padding: 10px;
+      }
+  
+      .strain-catagory-list > li >  a{ 
+        text-decoration: none;
+        color:black
+      }
+  
+      .indica-strains{
+        background-color: #3D233E;
+        color: #f1f1f1;
+      }
+  
+      .indica-strains li a{
+  
+        color: #f1f1f1;
+      }
+  
+      .strain-catagory-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      }
+  
+      .breeder{
+      border: 1px solid #000;
+      }
+  
+      .catalog-img > img{
+        width: 100%;
+      }
+  
+      .catalog-img {
+        padding: 20px;
+      }
+      .catalog-card{
+        text-align: center;
+        padding: 5px;
+      }
+  
+      .card-inside{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        border-bottom:1px solid #000;
+      }
+  
+      .catalog-card h3{
+        padding: 5px 0px;
+        font-size: 1.3rem;
+  
+      }
+  
+      .sativa{
+        background-color: #FFD46B;
+        color:black;
+      }
+  
+      .hybrid{
+        background-color:#1C7E8B;
+        color: #f1f1f1;
+      }
+  
+      .indica{
+        background-color: #3D233E;
+        color:#f1f1f1;
+      }
+      .catalog-card h6{
+        padding: 5px 0px;
+        font-size: 1.3rem;
+        font-weight:bold;
+  
+      }
+  
+      .catalog-card h4{
+        font-size: .7rem;
+        padding: 5px 0px;
+        
+      }
+  
+      .description {
+        font-size: 1.5rem;
+      }
+  
+      .catalog-card p{
+        padding: 5px 10px;
+        font-size: 1rem;
+        line-height: 1.3rem;
+      }
+  
+      .catalog-card span{
+        font-family: 'Kalam', cursive;
+        font-weight: bold;
+      }
+   
+  
+      .catalog-header-inside{
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+  
+      .x{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+        border:none;
+      }
+  
+      footer{
+        margin-top: 50px;
+      }
+  
+      footer p{
+        padding: 10px;
+      }
+  
+  
+  
+  
+      @media screen and (max-height: 450px) {
+          .overlay a {font-size: 20px}
+          .overlay .closebtn {
+          font-size: 40px;
+          top: 15px;
+          right: 35px;
+          }
+      }
+  
+  
+        @media screen and (min-width: 700px) {
+          .menuButton{
+              display: none;
+          }
+      
+          .desktop-nav{
+            display:flex;
+          }
+      
+          .logo img{
+            min-height: 150px;
+          }
+      
+          .desktop-nav li{
+            padding:20px;
+            text-align: center;   
+          }
+      
+          .desktop-nav li:hover{
+            background-color:rgba(255, 255, 255, .4) ; 
+          }
+      
+      
+          .desktop-nav li a{ 
+            color:#f1f1f1;    
+          }
+      
+          .strain-card{
+            top: 80%;
+            left: 70%;
+        }
+      
+        .strain-card h1{
+          font-size: 2rem;
+        }
+      
+        .strain-card a{
+          font-size: 1.8rem;
+          margin-left: 25px;
+        }
+      
+        #products2 h3{
+          font-size: 2rem;
+        }
+      
+        .retail-logo-grid{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+          align-items: center;
+          justify-items: center;
+          background-color: #fff;
+        }
+      
+        .about{
+          min-height: 550px;
+          background-size:contain;
+          background-repeat: no-repeat;
+        }
+      
+        .about-text{
+          padding-right: 150px;
+        }
+      
+        .about-text p{
+          line-height: 3rem;
+          font-size: 1.8rem;
+        }
+      
+        .about-link a{
+          font-size: 1.6rem;
+        }
+  
+        .catalog-grid{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto;
+        }
+  
+        .catalog-catagories{
+          display: grid;
+          grid-template-columns: 1fr;
+          }
+
+        .catalog-catagories h2{
+          font-size: 1.6rem;
+          font-weight: 900;
+        }
+
+        .hash-strain-catagory ul{
+          background-color:lightgray;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+
+
+        }
+        .hash-strain-catagory ul li{
+          background-color:lightgray;
+          padding:20px;
+          text-align: center;
+          text-decoration: none;
+          font-size: 1.2rem;
+
+        }
+   
+      
+    }
+      

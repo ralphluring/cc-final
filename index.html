@@ -1,90 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142491704-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-142491704-1');
+    </script>
     <link rel="icon" href="./assets/images/icon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
     <link href="https://fonts.googleapis.com/css?family=Assistant|Questrial" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Constellation</title>
 </head>
 <body>
-
-        <div id="age-modal">
-                <div class="age-modal-img">
-                    <img src="./assets/images/logo.png" alt="constellation logo" id="age-logo">
-                </div>
-                <div class="age-buttons">
-                    <h1>Are You 21 or older?</h1>
-                    <button class="age-button" id="yes-button" type="button">Yes</button>
-                    <button class="age-button" id="no-button" type="button">No</button>
-                </div>
-            </div>
+<div id="age-modal">
+    <div class="age-modal-img">
+        <img src="./assets/images/logo.png" alt="constellation logo" id="age-logo">
+    </div>
+    <div class="age-buttons">
+        <h1>Are You 21 or older?</h1>
+        <button class="age-button" id="yes-button" type="button">Yes</button>
+        <button class="age-button" id="no-button" type="button">No</button>
+    </div>
+</div>
     
 <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
-
-    <a href="straincatalog.html">Strain Catalog</a>
+        <div class="dropdown">
+            <button onclick="overlayDrop()" class="dropbtn">Products</button>
+            <div id="overlayDropdown" class="dropdown-content">
+                <a href="straincatalog.html">Flower</a>
+                <a href="prerolls.html">Prerolls</a>
+                <a href="hash.html">Hash</a>
+                <a href="vape.html">Vape Pens</a>
+            </div>
+        </div>  
     <a href="findus.html">Find Us</a>
     <a href="#">Blog</a>
-    <a href="#">Merch</a>
+    <a href="https://www.snakeswag.com" target="_blank">Merch</a>
+    <a href="events.html">Events</a>
+    <a href="#">For Retailers</a>
   </div>
 </div>
+
 <div class="container" id="main-wrapper">
     <header class="header">
         <div class="logo">
             <a href="index.html">
-            <img src="./assets/images/logo.png" alt="logo">
-        </a>
-        </div>
-        
+                <img src="./assets/images/logo.png" alt="logo">
+            </a>
+        </div>  
         <nav class="nav">
-            <ul class="desktop-nav">
-         
-                <li><a href="straincatalog.html">Strain Catalog</a></li>
-
+            <ul class="desktop-nav">  
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Products</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="straincatalog.html">Flower</a>
+                        <a href="prerolls.html">Prerolls</a>
+                        <a href="hash.html">Hash</a>
+                        <a href="vape.html">Vape Pens</a>
+                    </div>
+                </div>     
+                
                 <li><a href="findus.html">Find Us</a></li>
                 <li><a href="">Blog</a></li>
-                <li><a href="">Merch</a></li>
+                <li><a href="https://www.snakeswag.com" target="_blank">Merch</a></li>
+                <li>  <a href="events.html">Events</a></li>
+                <li> <a href="#">For Retailers</a></li>
             </ul>
-
             <img src="./assets/images/menu-button.png" alt="" height="50px" class="menuButton">
-        </nav>
-      
+        </nav> 
     </header>
 
     <div class="products">
         <div class="products-img">
-            <img src="./assets/images/frontlogo-min.jpg" alt="">
-        </div>
-        <div class="strain-card">
-                <h1>MotorBreath #15</h1>
-                <a href="straincatalog.html">Strain Catalog</a>   
+            <img src="./assets/images/hashandflower.jpg" alt="">
         </div>
     </div>
     
     <div class="products" id="products2">
         <div class="products-img">
-            <img src="./assets/images/products-1000-min.jpg" alt="">
-        </div>
-        
-        <div class="products-card" id="products-info">
-            <h1>Premium Indoor Flower</h1>
-            <h1>Infused Pre-rolls</h1>           
-            <h1>Solventless Extracts</h1>
-          
-        </div>
-        <!-- <a href="products.html" class="products-link">
-          <div class="">
-                <h3>See our full menu</h3>
-            </div>
-           
-        </a> -->
-        
+            <img src="./assets/images/prerollvape.jpeg" alt="">
+        </div>         
     </div>
 
     <div class="retailers">
@@ -98,110 +102,132 @@
         <div class="retail-logo-grid">
 
         <div class="retail">
-            <a href="https://haveaheartcc.com/"><img src="./assets/images/retaillogos/Haveaheart_logo.png" class="retail-photo" alt=""></a>
+            <a href="https://haveaheartcc.com/" target="__blank"><img src="./assets/images/retaillogos/Haveaheart_logo.png" class="retail-photo" alt=""></a>
         </div>
         <div class="retail">
-            <a href="https://www.bloomcannabis.com/bloom-everett"><img src="./assets/images/retaillogos/bloom.png" class="retail-photo" alt=""></a>
+            <a href="https://www.bloomcannabis.com/bloom-everett" target="__blank"><img src="./assets/images/retaillogos/bloom.png" class="retail-photo" alt=""></a>
         </div>
         <div class="retail">
-            <a href="https://www.findclearchoice.com/"><img src="./assets/images/retaillogos/clearchoice.jpg" class="retail-photo" alt=""></a>
+            <a href="https://www.findclearchoice.com/" target="__blank"><img src="./assets/images/retaillogos/clearchoice.jpg" class="retail-photo" alt=""></a>
         </div>
         <div class="retail">
-            <a href="http://www.clutchcannabis.com/"><img src="./assets/images/retaillogos/clutch.png" class="retail-photo" alt=""></a>
+            <a href="http://www.clutchcannabis.com/" target="__blank"><img src="./assets/images/retaillogos/clutch.png" class="retail-photo" alt=""></a>
         </div>
         <div class="retail">
-            <a href="https://www.diego-pellicer.com/"><img src="./assets/images/retaillogos/diego.png" class="retail-photo" alt=""></a>
+            <a href="https://www.diego-pellicer.com/" target="__blank"><img src="./assets/images/retaillogos/diego.png" class="retail-photo" alt=""></a>
         </div>
         <div class="retail">
-            <a href="https://www.firehousenw.com/"><img src="./assets/images/retaillogos/firehouse.jpg" class="retail-photo" alt=""></a>
+            <a href="https://www.firehousenw.com/" target="__blank"><img src="./assets/images/retaillogos/firehouse.jpg" class="retail-photo" alt=""></a>
         </div>
         <div class="retail">
-            <a href="http://www.fweedom.com/"><img src="./assets/images/retaillogos/fweedom.png" class="retail-photo" alt=""></a>
-        </div>
-
-        <div class="retail">
-            <a href="http://thegalleryco.com/"><img src="./assets/images/retaillogos/gallery.png" class="retail-photo" alt=""></a>
-        </div>
-        <div class="retail">
-            <a href="https://g2grec.com/"><img src="./assets/images/retaillogos/green2go.jpeg" class="retail-photo" alt=""></a>
-        </div>
-        <div class="retail">
-            <a href="http://greennuggetspokane.com/"><img src="./assets/images/retaillogos/greennugget.png" class="retail-photo" alt=""></a>
-        </div>
-        <div class="retail">
-            <a href="https://green-theory.com/"><img src="./assets/images/retaillogos/greentheory.jpg" class="retail-photo" alt=""></a>
-        </div>
-        <div class="retail">
-            <a href="http://highendmarketplace.com/menu/"><img src="./assets/images/retaillogos/highend.png" class="retail-photo" alt=""></a>
-        </div>
-        <div class="retail">
-            <a href="https://www.mylocalroots.com/"><img src="./assets/images/retaillogos/localroots.png" class="retail-photo" alt=""></a>
-        </div>
-        <div class="retail">
-            <a href="https://www.originscannabis.com/"><img src="./assets/images/retaillogos/origins.jpg" class="retail-photo" alt=""></a>
+            <a href="http://www.fweedom.com/" target="__blank"><img src="./assets/images/retaillogos/fweedom.png" class="retail-photo" alt=""></a>
         </div>
 
         <div class="retail">
-            <a href="http://prcarlington.com/"><img src="./assets/images/retaillogos/prcarlington.jpg" class="retail-photo" alt=""></a>
+            <a href="http://thegalleryco.com/" target="__blank"><img src="./assets/images/retaillogos/gallery.png" class="retail-photo" alt=""></a>
         </div>
         <div class="retail">
-            <a href="https://www.ruckusrec.com/"><img src="./assets/images/retaillogos/ruckus_logo.png" class="retail-photo" alt=""></a>
+            <a href="https://g2grec.com/" target="__blank"><img src="./assets/images/retaillogos/green2go.jpeg" class="retail-photo" alt=""></a>
         </div>
         <div class="retail">
-            <a href="http://www.satorimj.com/"><img src="./assets/images/retaillogos/satori.jpg" class="retail-photo" alt=""></a>
+            <a href="http://greennuggetspokane.com/" target="__blank"><img src="./assets/images/retaillogos/greennugget.png" class="retail-photo" alt=""></a>
         </div>
         <div class="retail">
-            <a href="https://ikes.com/"><img src="./assets/images/retaillogos/uncleikes.png" class="retail-photo" alt=""></a>
+            <a href="https://green-theory.com/" target="__blank"><img src="./assets/images/retaillogos/greentheory.jpg" class="retail-photo" alt=""></a>
         </div>
         <div class="retail">
-            <a href="https://agreenertoday.com/"><img src="./assets/images/retaillogos/greenertoday.png" class="retail-photo" alt=""></a>
+            <a href="http://highendmarketplace.com/menu/" target="__blank"><img src="./assets/images/retaillogos/highend.png" class="retail-photo" alt=""></a>
         </div>
         <div class="retail">
-            <a href="https://americanmarywa.com/"><img src="./assets/images/retaillogos/americanmary.png" class="retail-photo" alt=""></a>
+            <a href="https://www.mylocalroots.com/" target="__blank"><img src="./assets/images/retaillogos/localroots.png" class="retail-photo" alt=""></a>
         </div>
         <div class="retail">
-            <a href="http://www.cannazonebellingham.com/"><img src="./assets/images/retaillogos/cannazone.png" class="retail-photo" alt=""></a>
+            <a href="https://www.originscannabis.com/" target="__blank"><img src="./assets/images/retaillogos/origins.jpg" class="retail-photo" alt=""></a>
+        </div>
+
+        <div class="retail">
+            <a href="http://prcarlington.com/" target="__blank"><img src="./assets/images/retaillogos/prcarlington.jpg" class="retail-photo" alt=""></a>
         </div>
         <div class="retail">
-            <a href="https://www.theevergreenmarket.com/"><img src="./assets/images/retaillogos/evergreen.png" class="retail-photo" alt="" style="background-color:black"></a>
+            <a href="https://www.ruckusrec.com/" target="__blank"><img src="./assets/images/retaillogos/ruckus_logo.png" class="retail-photo" alt=""></a>
         </div>
         <div class="retail">
-            <a href="https://www.ganjagoddessseattle.com/"><img src="./assets/images/retaillogos/ganjagoddess.jpg" class="retail-photo" alt="" style="background-color:black"></a>
+            <a href="http://www.satorimj.com/" target="__blank"><img src="./assets/images/retaillogos/satori.jpg" class="retail-photo" alt=""></a>
+        </div>
+        <div class="retail">
+            <a href="https://ikes.com/" target="__blank"><img src="./assets/images/retaillogos/uncleikes.png" class="retail-photo" alt=""></a>
+        </div>
+        <div class="retail">
+            <a href="https://agreenertoday.com/" target="__blank"><img src="./assets/images/retaillogos/greenertoday.png" class="retail-photo" alt=""></a>
+        </div>
+        <div class="retail">
+            <a href="https://americanmarywa.com/" target="__blank"><img src="./assets/images/retaillogos/americanmary.png" class="retail-photo" alt=""></a>
+        </div>
+        <div class="retail">
+            <a href="http://www.cannazonebellingham.com/" target="__blank"><img src="./assets/images/retaillogos/cannazone.png" class="retail-photo" alt=""></a>
+        </div>
+        <div class="retail">
+            <a href="https://www.theevergreenmarket.com/" target="__blank"><img src="./assets/images/retaillogos/evergreen.png" class="retail-photo" alt="" style="background-color:black"></a>
+        </div>
+        <div class="retail">
+            <a href="https://www.ganjagoddessseattle.com/" target="__blank"><img src="./assets/images/retaillogos/ganjagoddess.jpg" class="retail-photo" alt="" style="background-color:black"></a>
         </div>
    
         <div class="retail">
-            <a href="http://herbalnationbothell.com/"><img src="./assets/images/retaillogos/herbalnation.png" class="retail-photo" alt="" ></a>
+            <a href="http://herbalnationbothell.com/" target="__blank"><img src="./assets/images/retaillogos/herbalnation.png" class="retail-photo" alt="" ></a>
         </div>
         <div class="retail">
-            <a href="https://www.higherleaf.com/"><img src="./assets/images/retaillogos/higherleaf.png" class="retail-photo" alt="" ></a>
+            <a href="https://www.higherleaf.com/" target="__blank"><img src="./assets/images/retaillogos/higherleaf.png" class="retail-photo" alt="" ></a>
         </div>
    
-
-
- 
-
         </div>
     </div>
 
     <div class="about">
         <div class="about-text">
+            <h1>About Us</h1>
             <p>  
-                    If you have tried our award winning solventless hash, our potent and flavorfull
-                    infused pre-rolls, or our hand trimmed premium flower, then you know we pride ourselves 
-                    in bringing Washington the highest quality cannabis.
+                If you have tried our award winning solventless hash, our potent and flavorfull
+                infused pre-rolls, or our hand trimmed premium flower, then you know we pride ourselves 
+                in bringing Washington the highest quality cannabis.
+                <br>
             </p>
+            <span class="social-arrow">
+                <p>Follow us</p>
+                 <p>\/</p>
+            </span>
+  
         </div>
        
-
         <div class="about-link">
             <div class="instagram social">
-                <a href="https://www.instagram.com/constellationcannabis/">
+                <a href="https://www.instagram.com/constellationcannabis/" target="__blank">
                  <img src="./assets/images/instagram.png" alt="">
                 </a>
             </div>
             <div class="leafly social">
-                <a href="https://www.leafly.com/brands/constellation-cannabis">
+                <a href="https://www.leafly.com/brands/constellation-cannabis" target="__blank">
                     <img src="./assets/images/leafly.png" alt="">
+                </a>
+            </div>
+            <div class="twitter social">
+                <a href="https://twitter.com/constcannabis" target="__blank">
+                    <img src="./assets/images/Twitter_Social_Icon_Rounded_Square_Color.png" alt="">
+                </a>
+            </div>
+            <div class="facebook social">
+                <a href="https://www.facebook.com/constellationTHC" target="__blank">
+                    <img src="./assets/images/facebook.png" alt="">
+                </a>
+            </div>
+            <div class="snapchat social">
+                <a href="#">
+                    <img src="./assets/images/snap-ghost-yellow.png" alt="">
+                </a>
+            </div>
+            <div class="pinterest social">
+                <a href="#">
+                    <img src="./assets/images/badgeRGB-244px.png" alt="">
                 </a>
             </div>
          </div>
@@ -209,7 +235,6 @@
     </div>
 
     <footer>
-        
         <p>
             "This product has intoxicating effects and may be habit forming. 
             Marijuana can impair concentration, coordination, and judgment. 
@@ -223,18 +248,7 @@
 
 </div>
 
-
-
 <script src="./assets/js/index.js"></script>
-   <!-- ,;;;;;;;;;;;.
- ,;;;;;;;;;`````)
-,;;;;;;;;'    (@)               ,',
-;;;;;;;;')       \               ,
-;;;;;;;;_}       _)            ',
-;;;;;;'        _;_______________
-`;;;;;        ;_.---------------'
-  `;;;         (
-    `;.        ) cb 2019-->
 
 </body>
 </html>

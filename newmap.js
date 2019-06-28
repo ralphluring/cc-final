@@ -1,5 +1,14 @@
 let retailers = [
     {
+        "name":"American Mary",
+        "address":"398-302 NE 45th St",
+        "city":"Seattle",
+        "coord":[47.661416,-122.324231],
+        "logo":"./assets/images/retaillogos/americanmary.png",
+        "group":"seattle",
+        "website":"https://americanmarywa.com/"              
+    },
+    {
         "name":"A Greener Today",
         "address":"19315 Bothell Everett Hwy Unit#1",
         "city":"Bothell",
@@ -23,14 +32,7 @@ let retailers = [
         "logo":"./assets/images/retaillogos/greenertoday.png",
         "group":"north"             
     },
-    {
-        "name":"American Mary",
-        "address":"398-302 NE 45th St",
-        "city":"Seattle",
-        "coord":[47.661416,-122.324231],
-        "logo":"./assets/images/retaillogos/americanmary.png",
-        "group":"seattle"              
-    },
+
     {
         "name":"Bloom",
         "address":"19302 Bothell Everett Hwy",
@@ -366,6 +368,15 @@ let retailers = [
         "coord":[47.046647, -122.852620],
         "logo":"./assets/images/retaillogos/greennugget.png",
         "group":"east"             
+    },
+    {
+        "name":"The Green Seed",
+        "address":"412 S Interlake Rd",
+        "city":"Moses Lake",
+        "coord":[47.102959, -119.312597],
+        "logo":"./assets/images/retaillogos/thegreenseed.jpg",
+        "group":"east",
+        "website":"https://weedmaps.com/dispensaries/the-green-seed"           
     }
 ]
 

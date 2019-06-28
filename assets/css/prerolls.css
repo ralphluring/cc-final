@@ -1,0 +1,76 @@
+.preroll-head{
+    color:#f1f1f1;
+    text-align: center;
+}
+
+.preroll-head h1{
+    padding: 10px;
+}
+
+.preroll-head img{
+    height: 50px;
+    background-color: #f1f1f1
+}
+
+.preroll-catalog{ 
+    width: 100%;
+    text-align: center;
+    background-color: white;
+}
+
+ th{
+    padding: 5px;
+    text-decoration: underline;
+}
+
+td{
+    padding: 5px;
+    font-size: .9rem;
+}
+
+td:first-child{
+    font-weight: 900;
+}
+
+tbody > tr {
+    border-bottom: .5px dotted lightgray;
+}
+
+
+.preroll-banner{
+    width:100%;
+    background-image: url("../images/prerolls/prerolls.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20vh;
+}
+
+.preroll-banner img{
+    width:100%;
+}
+
+/* MAIN DESKTOP STYLES */
+@media screen and (min-width: 700px) {
+    .preroll-banner{
+        min-height: 400px;
+    }
+
+    thead{
+
+        font-size: 1.7rem;
+        font-weight: bold;
+  
+    }
+
+    tbody{
+
+        display: grid;
+    }
+
+
+    tr{
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;
+    }
+}
+
