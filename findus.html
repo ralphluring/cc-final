@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type='text/javascript' src='./assets/js/config.js'></script>
     <link rel="icon" href="./assets/images/icon.png">
     <link href="https://fonts.googleapis.com/css?family=Assistant|Questrial" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/reset.css">
@@ -91,6 +92,8 @@
 </div>
 
 <script>
+    var mykey = config.MY_KEY;
+ 
     function initMap() {
         let mapicon = "./assets/images/retaillogos/mapicon.png";
         var locations = [
@@ -178,7 +181,11 @@
     
 </script>
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiJkd8DOcrq3928RWzrxZijuP7FiDYnaU&callback=initMap"></script>
+<script 
+async defer 
+src="https://maps.googleapis.com/maps/api/js?key=" + key + "&callback=initMap">
+
+</script>
 <script src="newmap.js"></script>
 <script src="./assets/js/index.js"></script>
 </body>
