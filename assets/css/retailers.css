@@ -1,0 +1,29 @@
+.retailers-container{
+    background-color: #ffffff;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+}
+
+.retailer-item{
+    border: 1px solid black;
+    width: 75%;
+    margin: 20px 0px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.retailer-item p {
+    line-height: 1.7rem;
+}
+
+.retailer-item a {
+    font-size: 1.8rem;
+    color:darkblue;
+}
+.retailer-item h4{
+    font-size: 1.8rem;
+    text-align: center;
+}
+

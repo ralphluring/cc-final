@@ -1,0 +1,28 @@
+.vape-header{
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.vape-header ul{
+    list-style: circle;
+    padding: 10px;
+}
+
+.vape-header li{
+    width: 100%;
+    padding: 10px 0px;
+}
+.vape-header h1{
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.vape-img-container {
+    width: 100%;
+    display: flex;
+}
+.vape-img-container img{
+    width: 100%;
+}
